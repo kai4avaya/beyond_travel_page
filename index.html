@@ -1,0 +1,1356 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Beyond Travel Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  </head>
+  <body class="bg-gray-100 gap-4">
+    <div class="bg-white p-6">
+      <div class="grid grid-cols-3 gap-4">
+        <div class="col-span-1">
+
+
+             <div class="bg-white rounded-lg shadow-md p-4 max-w-sm">
+          <section aria-labelledby="personal-information-heading">
+            <div class="overflow-x-auto border border-gray-200 sm:rounded-lg">
+                <table class="min-w-full divide-y divide-gray-200">
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Personal Information
+                      </th>
+                      <th scope="col" class="relative px-6 py-3">
+                        <span class="sr-only">Details</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="bg-white divide-y divide-gray-200">
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap">Name</td>
+                      <td class="px-6 py-4 whitespace-nowrap">Alex Marks</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap">Address</td>
+                      <td class="px-6 py-4 whitespace-nowrap">21 Street, Sustainable City</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap">Phone</td>
+                      <td class="px-6 py-4 whitespace-nowrap">Alex Marks</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap">Biometric Authentication</td>
+                      <td class="px-6 py-4 whitespace-nowrap">Enabled</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap">Language</td>
+                      <td class="px-6 py-4 whitespace-nowrap">English</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </section>
+          <section aria-labelledby="customer-record-heading" class="mt-6">
+            <div class="overflow-x-auto border border-gray-200 sm:rounded-lg mt-6">
+  <table class="min-w-full divide-y divide-gray-200">
+    <thead class="bg-gray-50">
+      <tr>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Customer Record
+        </th>
+        <th scope="col" class="relative px-6 py-3">
+          <span class="sr-only">Details</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="bg-white divide-y divide-gray-200">
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap">Record Number</td>
+        <td class="px-6 py-4 whitespace-nowrap">Passport No. A2342423</td>
+      </tr>
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap">Customer Email</td>
+        <td class="px-6 py-4 whitespace-nowrap">AlexMark@gmail.com</td>
+      </tr>
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap">Communication Preference</td>
+        <td class="px-6 py-4 whitespace-nowrap">Chat</td>
+      </tr>
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap">SMS Communication</td>
+        <td class="px-6 py-4 whitespace-nowrap">Enabled</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+          </section>
+          <section aria-labelledby="interaction-history-heading" class="mt-6">
+         <!-- Interaction History Table -->
+<div class="overflow-x-auto mt-6 border border-gray-200 sm:rounded-lg">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
+        <tr>
+          <th colspan="3" scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Interaction History
+          </th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        <!-- First Interaction History Entry -->
+        <tr>
+          <td class="px-6 py-4 whitespace-nowrap flex items-center">
+            <!-- SVG for Virtual Assistant -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 mr-2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span>Virtual Assistant Link to Sunway</span>
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap">Customer Account Representative, Bea Atlanta</td>
+          <td class="px-6 py-4 whitespace-nowrap">13 March 2019, Monday</td>
+        </tr>
+        <!-- Second Interaction History Entry -->
+        <tr>
+          <td class="px-6 py-4 whitespace-nowrap flex items-center">
+            <!-- SVG for Live Chat -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500 mr-2">
+              <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path>
+            </svg>
+            <span>Live Chat Link to Orlando</span>
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap">Customer Service Representative, Nikki Shelton</td>
+          <td class="px-6 py-4 whitespace-nowrap">30 December 2018, Sunday</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+          </section>
+        </div>
+        </div>
+        <div class="col-span-2">
+          <section aria-labelledby="beyond-skywards-heading">
+            <div class="bg-white rounded-lg shadow-md p-4">
+            <h2 id="beyond-skywards-heading" class="sr-only">
+              Beyond Skywards
+            </h2>
+            <div class="grid grid-cols-3 gap-4">
+              <div class="bg-blue-200 p-4 rounded-lg">
+                <h3 class="text-lg font-semibold">Skywards Tiers</h3>
+                <div class="mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-blue-500"
+                  >
+                    <circle cx="12" cy="8" r="6"></circle>
+                    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                  </svg>
+                  <div>
+                    <span>Remaining Tier Miles To Platinum</span
+                    ><span>20,000</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-yellow-200 p-4 rounded-lg">
+                <h3 class="text-lg font-semibold">Skywards Miles</h3>
+                <div class="mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-yellow-500"
+                  >
+                    <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                    <line x1="2" x2="22" y1="10" y2="10"></line>
+                  </svg>
+                  <div>
+                    <span>Available Miles To Redeem</span><span>75,376</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-red-200 p-4 rounded-lg">
+                <h3 class="text-lg font-semibold">Notification</h3>
+                <div class="mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-red-500"
+                  >
+                    <polyline points="20 12 20 22 4 22 4 12"></polyline>
+                    <rect width="20" height="5" x="2" y="7"></rect>
+                    <line x1="12" x2="12" y1="22" y2="7"></line>
+                    <path
+                      d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"
+                    ></path>
+                    <path
+                      d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"
+                    ></path>
+                  </svg>
+                  <div>
+                    <span>Offers</span
+                    ><span>Frequent Flyer To Caribbean Region</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </section>
+          <section
+            aria-labelledby="nearest-local-branches-heading"
+            class="mt-6"
+          >
+
+          <div class="bg-white rounded-lg shadow-md p-4 max-w">
+
+                  <!-- White rounded card container -->
+  <div class="p-4 grid grid-cols-2 grid-rows-2 gap-2">
+    <!-- Top-left quadrant -->
+    <div class="border border-gray-300 p-2">
+        <h2
+              id="nearest-local-branches-heading"
+              class="text-lg font-semibold"
+            >
+              Nearest Local Branches
+            </h2>
+            <div class="mt-4 space-y-2">
+              <div class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-gray-500"
+                >
+                  <path
+                    d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                  </svg><span><a href="#" class="location-link" data-lat="51.4945" data-lng="-0.1749">95 Cromwell Street </a> (267)-061-4525</span>
+              </div>
+              <div class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-gray-500"
+                >
+                  <path
+                    d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle></svg><span><a href="#" class="location-link" data-lat="51.5074" data-lng="0.0275">27 Western Gateway </a> (267)-061-4525</span>
+              </div>
+              <div class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-gray-500"
+                >
+                  <path
+                    d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle></svg><span><a href="#" class="location-link" data-lat="51.5107" data-lng="-0.2957">56 Earling Broadway</a> (267)-061-4525</span>
+              </div>
+            </div>
+    </div>
+    <!-- Top-right quadrant -->
+    <div class="border border-gray-300 p-2 flex justify-center items-center">
+      <p>Quadrant 2</p>
+    </div>
+    <!-- Bottom-left quadrant -->
+    <div class="border border-gray-300 p-2 flex justify-center items-center">
+      <p>Quadrant 3</p>
+    </div>
+    <!-- Bottom-right quadrant -->
+    <div class="border border-gray-300 p-2 flex justify-center items-center">
+      <p>Quadrant 4</p>
+    </div>
+  </div>
+            </div>
+          
+            <h2
+              id="nearest-local-branches-heading"
+              class="text-lg font-semibold"
+            >
+              Nearest Local Branches
+            </h2>
+            <div class="mt-4 space-y-2">
+              <div class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-gray-500"
+                >
+                  <path
+                    d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                  </svg><span><a href="#" class="location-link" data-lat="51.4945" data-lng="-0.1749">95 Cromwell Street </a> (267)-061-4525</span>
+              </div>
+              <div class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-gray-500"
+                >
+                  <path
+                    d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle></svg><span><a href="#" class="location-link" data-lat="51.5074" data-lng="0.0275">27 Western Gateway </a> (267)-061-4525</span>
+              </div>
+              <div class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-gray-500"
+                >
+                  <path
+                    d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle></svg><span><a href="#" class="location-link" data-lat="51.5107" data-lng="-0.2957">56 Earling Broadway</a> (267)-061-4525</span>
+              </div>
+            </div>
+            <div class="mt-4">
+              <!-- <img
+                src="/placeholder.svg"
+                alt="Map"
+                class="w-full h-[200px] object-cover rounded-lg"
+                width="600"
+                height="200"
+                style="aspect-ratio: 600 / 200; object-fit: cover"
+              /> -->
+              <div id="map" class="h-64"></div>
+            </div>
+          </section>
+          <section aria-labelledby="loyalty-index-heading" class="mt-6">
+            <h2 id="loyalty-index-heading" class="text-lg font-semibold">
+              Life Time Loyalty Index
+            </h2>
+            <div class="w-full h-[300px]">
+              <div style="width: 100%; height: 100%">
+                <div style="position: relative">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="287.109375"
+                    height="300"
+                    role="application"
+                  >
+                    <rect
+                      width="287.109375"
+                      height="300"
+                      fill="transparent"
+                    ></rect>
+                    <g transform="translate(40,10)">
+                      <g>
+                        <line
+                          opacity="1"
+                          x1="0"
+                          x2="0"
+                          y1="0"
+                          y2="250"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                        <line
+                          opacity="1"
+                          x1="47.421875"
+                          x2="47.421875"
+                          y1="0"
+                          y2="250"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                        <line
+                          opacity="1"
+                          x1="94.84375"
+                          x2="94.84375"
+                          y1="0"
+                          y2="250"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                        <line
+                          opacity="1"
+                          x1="142.265625"
+                          x2="142.265625"
+                          y1="0"
+                          y2="250"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                        <line
+                          opacity="1"
+                          x1="189.6875"
+                          x2="189.6875"
+                          y1="0"
+                          y2="250"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                        <line
+                          opacity="1"
+                          x1="237.109375"
+                          x2="237.109375"
+                          y1="0"
+                          y2="250"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                      </g>
+                      <g>
+                        <line
+                          opacity="1"
+                          x1="0"
+                          x2="237.109375"
+                          y1="250"
+                          y2="250"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                        <line
+                          opacity="1"
+                          x1="0"
+                          x2="237.109375"
+                          y1="189"
+                          y2="189"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                        <line
+                          opacity="1"
+                          x1="0"
+                          x2="237.109375"
+                          y1="127"
+                          y2="127"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                        <line
+                          opacity="1"
+                          x1="0"
+                          x2="237.109375"
+                          y1="66"
+                          y2="66"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                        <line
+                          opacity="1"
+                          x1="0"
+                          x2="237.109375"
+                          y1="5"
+                          y2="5"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                      </g>
+                      <g transform="translate(0,250)">
+                        <g transform="translate(0,0)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            Jan
+                          </text>
+                        </g>
+                        <g
+                          transform="translate(47.421875,0)"
+                          style="opacity: 1"
+                        >
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            Feb
+                          </text>
+                        </g>
+                        <g transform="translate(94.84375,0)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            Mar
+                          </text>
+                        </g>
+                        <g
+                          transform="translate(142.265625,0)"
+                          style="opacity: 1"
+                        >
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            Apr
+                          </text>
+                        </g>
+                        <g transform="translate(189.6875,0)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            May
+                          </text>
+                        </g>
+                        <g
+                          transform="translate(237.109375,0)"
+                          style="opacity: 1"
+                        >
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            Jun
+                          </text>
+                        </g>
+                        <line
+                          x1="0"
+                          x2="237.109375"
+                          y1="0"
+                          y2="0"
+                          style="stroke: transparent; stroke-width: 1"
+                        ></line>
+                      </g>
+                      <g transform="translate(0,0)">
+                        <g transform="translate(0,250)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="central"
+                            text-anchor="end"
+                            transform="translate(-16,0) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            0
+                          </text>
+                        </g>
+                        <g transform="translate(0,189)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="central"
+                            text-anchor="end"
+                            transform="translate(-16,0) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            50
+                          </text>
+                        </g>
+                        <g transform="translate(0,127)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="central"
+                            text-anchor="end"
+                            transform="translate(-16,0) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            100
+                          </text>
+                        </g>
+                        <g transform="translate(0,66)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="central"
+                            text-anchor="end"
+                            transform="translate(-16,0) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            150
+                          </text>
+                        </g>
+                        <g transform="translate(0,5)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="central"
+                            text-anchor="end"
+                            transform="translate(-16,0) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            200
+                          </text>
+                        </g>
+                        <line
+                          x1="0"
+                          x2="0"
+                          y1="0"
+                          y2="250"
+                          style="stroke: transparent; stroke-width: 1"
+                        ></line>
+                      </g>
+                      <path
+                        d="M0,176C15.807291666666666,183.5,31.614583333333336,191,47.421875,191C63.229166666666664,191,79.03645833333333,33,94.84375,33C110.65104166666667,33,126.45833333333333,154,142.265625,154C158.07291666666666,154,173.88020833333334,146.66666666666666,189.6875,132C205.49479166666666,117.33333333333333,221.30208333333334,58.666666666666664,237.109375,0"
+                        fill="none"
+                        stroke-width="2"
+                        stroke="#e11d48"
+                      ></path>
+                      <path
+                        d="M0,197C15.807291666666666,139.5,31.614583333333336,82,47.421875,82C63.229166666666664,82,79.03645833333333,175,94.84375,175C110.65104166666667,175,126.45833333333333,72,142.265625,72C158.07291666666666,72,173.88020833333334,218,189.6875,218C205.49479166666666,218,221.30208333333334,139.5,237.109375,61"
+                        fill="none"
+                        stroke-width="2"
+                        stroke="#2563eb"
+                      ></path>
+                      <g>
+                        <g
+                          transform="translate(237.109375, 0)"
+                          style="pointer-events: none"
+                        >
+                          <circle
+                            r="3"
+                            fill="#e11d48"
+                            stroke="transparent"
+                            stroke-width="0"
+                            style="pointer-events: none"
+                          ></circle>
+                        </g>
+                        <g
+                          transform="translate(189.6875, 132)"
+                          style="pointer-events: none"
+                        >
+                          <circle
+                            r="3"
+                            fill="#e11d48"
+                            stroke="transparent"
+                            stroke-width="0"
+                            style="pointer-events: none"
+                          ></circle>
+                        </g>
+                        <g
+                          transform="translate(142.265625, 154)"
+                          style="pointer-events: none"
+                        >
+                          <circle
+                            r="3"
+                            fill="#e11d48"
+                            stroke="transparent"
+                            stroke-width="0"
+                            style="pointer-events: none"
+                          ></circle>
+                        </g>
+                        <g
+                          transform="translate(94.84375, 33)"
+                          style="pointer-events: none"
+                        >
+                          <circle
+                            r="3"
+                            fill="#e11d48"
+                            stroke="transparent"
+                            stroke-width="0"
+                            style="pointer-events: none"
+                          ></circle>
+                        </g>
+                        <g
+                          transform="translate(47.421875, 191)"
+                          style="pointer-events: none"
+                        >
+                          <circle
+                            r="3"
+                            fill="#e11d48"
+                            stroke="transparent"
+                            stroke-width="0"
+                            style="pointer-events: none"
+                          ></circle>
+                        </g>
+                        <g
+                          transform="translate(0, 176)"
+                          style="pointer-events: none"
+                        >
+                          <circle
+                            r="3"
+                            fill="#e11d48"
+                            stroke="transparent"
+                            stroke-width="0"
+                            style="pointer-events: none"
+                          ></circle>
+                        </g>
+                        <g
+                          transform="translate(237.109375, 61)"
+                          style="pointer-events: none"
+                        >
+                          <circle
+                            r="3"
+                            fill="#2563eb"
+                            stroke="transparent"
+                            stroke-width="0"
+                            style="pointer-events: none"
+                          ></circle>
+                        </g>
+                        <g
+                          transform="translate(189.6875, 218)"
+                          style="pointer-events: none"
+                        >
+                          <circle
+                            r="3"
+                            fill="#2563eb"
+                            stroke="transparent"
+                            stroke-width="0"
+                            style="pointer-events: none"
+                          ></circle>
+                        </g>
+                        <g
+                          transform="translate(142.265625, 72)"
+                          style="pointer-events: none"
+                        >
+                          <circle
+                            r="3"
+                            fill="#2563eb"
+                            stroke="transparent"
+                            stroke-width="0"
+                            style="pointer-events: none"
+                          ></circle>
+                        </g>
+                        <g
+                          transform="translate(94.84375, 175)"
+                          style="pointer-events: none"
+                        >
+                          <circle
+                            r="3"
+                            fill="#2563eb"
+                            stroke="transparent"
+                            stroke-width="0"
+                            style="pointer-events: none"
+                          ></circle>
+                        </g>
+                        <g
+                          transform="translate(47.421875, 82)"
+                          style="pointer-events: none"
+                        >
+                          <circle
+                            r="3"
+                            fill="#2563eb"
+                            stroke="transparent"
+                            stroke-width="0"
+                            style="pointer-events: none"
+                          ></circle>
+                        </g>
+                        <g
+                          transform="translate(0, 197)"
+                          style="pointer-events: none"
+                        >
+                          <circle
+                            r="3"
+                            fill="#2563eb"
+                            stroke="transparent"
+                            stroke-width="0"
+                            style="pointer-events: none"
+                          ></circle>
+                        </g>
+                      </g>
+                      <g>
+                        <rect
+                          width="237.109375"
+                          height="250"
+                          fill="red"
+                          opacity="0"
+                          style="cursor: auto"
+                        ></rect>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section aria-labelledby="journey-intelligence-heading" class="mt-6">
+            <h2 id="journey-intelligence-heading" class="text-lg font-semibold">
+              Journey Intelligence
+            </h2>
+            <div class="w-full h-[300px]">
+              <div style="width: 100%; height: 100%">
+                <div style="position: relative">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="287.109375"
+                    height="300"
+                    role="application"
+                    aria-label="A bar chart showing data"
+                    focusable="false"
+                  >
+                    <rect
+                      width="287.109375"
+                      height="300"
+                      fill="transparent"
+                    ></rect>
+                    <g transform="translate(40,0)">
+                      <g>
+                        <line
+                          opacity="1"
+                          x1="0"
+                          x2="247.109375"
+                          y1="260"
+                          y2="260"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                        <line
+                          opacity="1"
+                          x1="0"
+                          x2="247.109375"
+                          y1="177"
+                          y2="177"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                        <line
+                          opacity="1"
+                          x1="0"
+                          x2="247.109375"
+                          y1="94"
+                          y2="94"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                        <line
+                          opacity="1"
+                          x1="0"
+                          x2="247.109375"
+                          y1="12"
+                          y2="12"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                      </g>
+                      <g transform="translate(0,260)">
+                        <g transform="translate(26,0)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            Jan
+                          </text>
+                        </g>
+                        <g transform="translate(65,0)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            Feb
+                          </text>
+                        </g>
+                        <g transform="translate(104,0)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            Mar
+                          </text>
+                        </g>
+                        <g transform="translate(143,0)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            Apr
+                          </text>
+                        </g>
+                        <g transform="translate(182,0)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            May
+                          </text>
+                        </g>
+                        <g transform="translate(221,0)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            Jun
+                          </text>
+                        </g>
+                        <line
+                          x1="0"
+                          x2="247.109375"
+                          y1="0"
+                          y2="0"
+                          style="stroke: transparent; stroke-width: 1"
+                        ></line>
+                      </g>
+                      <g transform="translate(0,0)">
+                        <g transform="translate(0,260)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="central"
+                            text-anchor="end"
+                            transform="translate(-16,0) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            0
+                          </text>
+                        </g>
+                        <g transform="translate(0,177)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="central"
+                            text-anchor="end"
+                            transform="translate(-16,0) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            50
+                          </text>
+                        </g>
+                        <g transform="translate(0,94)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="central"
+                            text-anchor="end"
+                            transform="translate(-16,0) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            100
+                          </text>
+                        </g>
+                        <g transform="translate(0,12)" style="opacity: 1">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1"
+                          ></line>
+                          <text
+                            dominant-baseline="central"
+                            text-anchor="end"
+                            transform="translate(-16,0) rotate(0)"
+                            style="
+                              font-family: sans-serif;
+                              font-size: 11px;
+                              fill: rgb(51, 51, 51);
+                              outline-width: 0px;
+                              outline-color: transparent;
+                            "
+                          >
+                            150
+                          </text>
+                        </g>
+                        <line
+                          x1="0"
+                          x2="0"
+                          y1="0"
+                          y2="260"
+                          style="stroke: transparent; stroke-width: 1"
+                        ></line>
+                      </g>
+                      <g transform="translate(12, 76)">
+                        <rect
+                          width="27"
+                          height="184"
+                          rx="0"
+                          ry="0"
+                          fill="#2563eb"
+                          stroke-width="0"
+                          stroke="#2563eb"
+                          focusable="false"
+                        ></rect>
+                      </g>
+                      <g transform="translate(51, 0)">
+                        <rect
+                          width="27"
+                          height="260"
+                          rx="0"
+                          ry="0"
+                          fill="#2563eb"
+                          stroke-width="0"
+                          stroke="#2563eb"
+                          focusable="false"
+                        ></rect>
+                      </g>
+                      <g transform="translate(90, 46)">
+                        <rect
+                          width="27"
+                          height="214"
+                          rx="0"
+                          ry="0"
+                          fill="#2563eb"
+                          stroke-width="0"
+                          stroke="#2563eb"
+                          focusable="false"
+                        ></rect>
+                      </g>
+                      <g transform="translate(129, 12)">
+                        <rect
+                          width="27"
+                          height="248"
+                          rx="0"
+                          ry="0"
+                          fill="#2563eb"
+                          stroke-width="0"
+                          stroke="#2563eb"
+                          focusable="false"
+                        ></rect>
+                      </g>
+                      <g transform="translate(168, 63)">
+                        <rect
+                          width="27"
+                          height="197"
+                          rx="0"
+                          ry="0"
+                          fill="#2563eb"
+                          stroke-width="0"
+                          stroke="#2563eb"
+                          focusable="false"
+                        ></rect>
+                      </g>
+                      <g transform="translate(207, 141)">
+                        <rect
+                          width="27"
+                          height="119"
+                          rx="0"
+                          ry="0"
+                          fill="#2563eb"
+                          stroke-width="0"
+                          stroke="#2563eb"
+                          focusable="false"
+                        ></rect>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="map.js"></script>
+</html>
