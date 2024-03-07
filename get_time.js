@@ -1,8 +1,8 @@
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("first_date").textContent = getDateWithOffset(0);
     document.getElementById("second_date").textContent = getDateWithOffset(3);
-}
+})
 function getDateWithOffset(offset = 0) {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
