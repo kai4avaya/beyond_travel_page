@@ -9,13 +9,22 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Add click listeners to the first 3 elements
     tiers.addEventListener("click", function () {
-      alert("Tiers has been updated to 25000");
-      tiers_values.textContent = "25000";
+      let new_val = parseInt(tiers_values.textContent, 10)
+      console.log("NEW VAL IS HERE!" , new_val)
+
+      new_val -= 5000
+      if (new_val < 0) new_val = 0
+      alert("Tiers has been updated to "  + new_val);
+      tiers_values.textContent = new_val;
     });
   
     miles.addEventListener("click", function () {
-      alert("5000 miles have been redeemed");
-      miles_values.textContent = "70,376";
+      let new_val = parseInt(miles_values.textContent, 10)
+      new_val -= 5000
+      if (new_val < 0) new_val = 0
+      alert("Miles has been updated to " + new_val);
+
+      miles_values.textContent = new_val;
     });
   
     notification.addEventListener("click", function () {
